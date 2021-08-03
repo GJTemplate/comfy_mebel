@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <updates>
     <update>
-        <name>comfy_mebel</name>
+        <name>Comfy Mebel Template</name>
         <description>Comfy Mebel</description>
         <element>comfy_mebel</element>
         <version>1.1</version>

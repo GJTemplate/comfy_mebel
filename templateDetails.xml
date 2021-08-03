@@ -24,6 +24,7 @@
 		<folder>js</folder>
 		<folder>language</folder>
 		<folder>less</folder>
+		<folder>libs</folder>
 	</files>
 
 	<updateservers>

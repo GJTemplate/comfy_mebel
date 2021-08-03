@@ -151,7 +151,6 @@ $mod_params = new JRegistry($header->params);
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-154242519-1');
 </script>
 
@@ -159,7 +158,8 @@ $mod_params = new JRegistry($header->params);
 	<div class="hidden_form">
 		<?php echo JHTML::_('content.prepare', '{chronoforms5}hidden_form{/chronoforms5}');?>
 	</div>
-	<section class="header">
+
+    <section class="header">
 		<div class="container">
 			<div class="row">
 				<header>
@@ -564,9 +564,15 @@ $mod_params = new JRegistry($header->params);
 							<a href="/" class="logo_footer"><img src="/templates/<?=$this->template?>/images/logo_footer.png"></a>
 							<div class="footer_text">Фабричное производство <br>кухонь в Минске</div>
 						</div>
+
 						<div class="footer_center">
-							<jdoc:include type="modules" name="menu" />
+							<?php
+
+                            /*<jdoc:include type="modules" name="menu" />*/
+                            ?>
+							<jdoc:include type="modules" name="menu-footer" />
 						</div>
+
 						<div class="footer_right" style="text-align:left;">
 							<a href="http://adena.by" target="blank" style="font-size:12px;">Разработка и продвижение сайта - Adena</a>
 						</div>
@@ -588,9 +594,6 @@ $mod_params = new JRegistry($header->params);
 			</div>
 		</footer>
 	</div>
-
-
-
 
 	<!--Форма обратного звонка-->
 	<div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -1039,15 +1042,28 @@ $mod_params = new JRegistry($header->params);
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    try {
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){
+                (m[i].a=m[i].a||[]).push(arguments)
+            };
+            m[i].l=1*new Date();
+            k=e.createElement(t),
+                a=e.getElementsByTagName(t)[0],
+                k.async=1,
+                k.src=r,
+                a.parentNode.insertBefore(k,a)
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(56593702, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    } catch {
+       console.log('index.php >>> ' , 'mc.yandex.ru/metrika/tag.js - не загружен' );
 
-   ym(56593702, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-   });
+    }
+
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/56593702" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
@@ -1061,7 +1077,7 @@ $mod_params = new JRegistry($header->params);
                 var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
                 var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
         })(window,document,'https://cdn.bitrix24.by/b11245434/crm/site_button/loader_2_o1vj4p.js');
-</script>
+    </script>
 
 
 

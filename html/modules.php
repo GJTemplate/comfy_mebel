@@ -9,6 +9,12 @@
 
 defined('_JEXEC') or die;
 
+
+
+
+
+
+
 /**
  * This is a file to add template specific chrome to module rendering.  To use it you would
  * set the style attribute for the given module(s) include in your template to use the style
@@ -28,6 +34,8 @@ defined('_JEXEC') or die;
  */
 function modChrome_no($module, &$params, &$attribs)
 {
+
+
 	if ($module->content)
 	{
 		echo $module->content;
