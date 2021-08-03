@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<updates>
+    <update>
+        <name>comfy_mebel</name>
+        <description>Comfy Mebel</description>
+        <element>comfy_mebel</element>
+        <version>1.1</version>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/GJTemplate/comfy_mebel/archive/refs/heads/main.zip</downloadurl>
+        </downloads>
+        <type>template</type>
+        <maintainer>Gartes</maintainer>
+        <maintainerurl>https://nobd.ga/</maintainerurl>
+        <section>Updates</section>
+        <targetplatform name="joomla" version="3.[0123456789]"/>
+        <client>site</client>
+    </update>
+</updates>
